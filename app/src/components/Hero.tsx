@@ -16,7 +16,7 @@ export const Hero = () => {
             transition={{ duration: 0.5 }}
             className="col-span-7 space-y-6"
           >
-            <h1 className="text-4xl lg:text-6xl font-extrabold">
+            <h1 className="text-4xl lg:text-6xl font-extrabold font-Ovo">
               Hello, I'm{" "}
               <span className="text-primary">
                 <TypeAnimation
@@ -27,7 +27,7 @@ export const Hero = () => {
                 />
               </span>
             </h1>
-            <p className="text-muted-foreground text-lg lg:text-xl">
+            <p className="text-muted-foreground text-lg lg:text-xl font-Ovo ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
               laborum, tenetur omnis eius nulla ratione repellat quibusdam
               corporis culpa blanditiis quaerat molestiae nemo! Voluptas
@@ -45,7 +45,7 @@ export const Hero = () => {
                 src="/images/daviaieta.png"
                 alt="Davi Carvalho"
                 fill
-                className="rounded-full object-cover border-4 border-primary shadow-lg"
+                className="rounded-full object-cover border-4 border-primary shadow-sm"
               />
             </div>
           </motion.div>
