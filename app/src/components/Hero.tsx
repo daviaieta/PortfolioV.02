@@ -4,6 +4,11 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+import Link from "next/link";
+import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+import { HiDownload } from "react-icons/hi";
+import { FaGithubSquare } from "react-icons/fa";
+import { Github, GithubIcon, Linkedin } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -16,7 +21,7 @@ export const Hero = () => {
             transition={{ duration: 0.5 }}
             className="col-span-7 space-y-6"
           >
-            <h1 className="text-4xl lg:text-6xl font-extrabold font-Ovo">
+            <h1 className="text-4xl lg:text-6xl font-extrabold font-Ovo text-gray-800">
               Hello, I'm{" "}
               <span className="text-primary">
                 <TypeAnimation
@@ -27,12 +32,35 @@ export const Hero = () => {
                 />
               </span>
             </h1>
-            <p className="text-muted-foreground text-lg lg:text-xl font-Ovo ">
+            <p className="text-muted-foreground text-lg lg:text-xl font-Ovo text-gray-800">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
               laborum, tenetur omnis eius nulla ratione repellat quibusdam
               corporis culpa blanditiis quaerat molestiae nemo! Voluptas
               suscipit perspiciatis quibusdam commodi molestiae odit!
             </p>
+            <div className="flex flex-col sm:flex-row items-center justify-start gap-5 text-center">
+              <Link
+                href="#contact"
+                className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition duration-300"
+              >
+                Contact me{" "}
+                <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+              </Link>
+              <a
+                href="https://www.linkedin.com/in/davi-aieta/"
+                target="_blank"
+                className="bg-white rounded-full p-2"
+              >
+                <Linkedin className="w-5" />
+              </a>
+              <a
+                href="https://github.com/daviaieta"
+                target="_blank"
+                className="bg-white rounded-full"
+              >
+                <GithubIcon className="w-5" />
+              </a>
+            </div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -45,7 +73,7 @@ export const Hero = () => {
                 src="/images/daviaieta.png"
                 alt="Davi Carvalho"
                 fill
-                className="rounded-full object-cover border-4 border-primary shadow-sm"
+                className="rounded-full object-cover border-2 shadow-sm"
               />
             </div>
           </motion.div>
