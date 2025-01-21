@@ -1,8 +1,10 @@
 import { Hero } from "@/components/Hero";
+import { Navbar } from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex col container mx-auto py-4">
+    <main className="flex flex-col items-center px-4">
+      <Navbar />
       <Hero />
     </main>
   );

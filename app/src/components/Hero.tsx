@@ -20,9 +20,9 @@ export const Hero = () => {
               Hello, I'm{" "}
               <span className="text-primary">
                 <TypeAnimation
-                  sequence={["Davi Carvalho", 1000, "a Developer", 1000]}
+                  sequence={["Davi Carvalho", 1000, "a Developer 💻", 1000]}
                   wrapper="span"
-                  speed={50}
+                  speed={25}
                   repeat={Infinity}
                 />
               </span>
