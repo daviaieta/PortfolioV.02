@@ -17,14 +17,14 @@ export const About = () => {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-muted">
+    <section id="about-me" className="py-16 lg:py-24">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="flex justify-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="col-span-7 space-y-6"
+            className="max-w-3xl space-y-6 text-center"
           >
             <h2 className="text-3xl lg:text-5xl font-bold font-Ovo text-gray-800">
               About Me
@@ -40,7 +40,7 @@ export const About = () => {
                 Learning
               </h3>
               <motion.div
-                className="flex flex-wrap gap-4"
+                className="flex flex-wrap justify-center gap-4"
                 initial="hidden"
                 animate="visible"
                 variants={{
