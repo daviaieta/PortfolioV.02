@@ -33,10 +33,9 @@ export const Hero = () => {
               </span>
             </h1>
             <p className="text-muted-foreground text-lg lg:text-xl font-Ovo text-gray-800">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              laborum, tenetur omnis eius nulla ratione repellat quibusdam
-              corporis culpa blanditiis quaerat molestiae nemo! Voluptas
-              suscipit perspiciatis quibusdam commodi molestiae odit!
+              Tenho 15 anos e sou um estudante de programação fullstack,
+              explorando e aprendendo constantemente sobre o mundo da tecnologia
+              para construir um futuro inovador.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-start gap-5 text-center">
               <Link
