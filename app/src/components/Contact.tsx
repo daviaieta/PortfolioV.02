@@ -8,13 +8,32 @@ import { Github, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
+import emailjs from "emailjs-com";
+import dotenv from "dotenv";
+import sendEmail from "../../actions/sendEmail";
+
+dotenv.config();
 
 export const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isSending, setIsSending] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = () => {};
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    setIsSending(true);
+    try {
+      await sendEmail(name, email, message);
+      setIsSuccess(true);
+    } catch (error) {
+      setIsSuccess(false);
+    } finally {
+      setIsSending(false);
+    }
+  };
 
   return (
     <section id="contact" className="py-16 lg:py-24">
@@ -133,6 +152,12 @@ export const Contact = () => {
               className="bg-white rounded-full p-3 hover:bg-gray-100 transition shadow-md"
             >
               <Github className="w-6 h-6 text-gray-800" />
+            </a>
+            <a
+              href="mailto:aieta.davi@gmail.com?subject=Contact%20from%20Portfolio&body=Hello%20Davi,%20I%20would%20like%20to%20get%20in%20touch%20with%20you!"
+              className="bg-white rounded-full p-3 hover:bg-gray-100 transition shadow-md"
+            >
+              <Mail className="w-6 h-6 text-gray-800" />
             </a>
           </div>
         </motion.div>

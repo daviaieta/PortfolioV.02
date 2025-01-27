@@ -32,18 +32,19 @@ export const Hero = () => {
                 />
               </span>
             </h1>
-            <p className="text-muted-foreground text-lg lg:text-xl font-Ovo text-gray-800">
-              Tenho 15 anos e sou um estudante de programação fullstack,
-              explorando e aprendendo constantemente sobre o mundo da tecnologia
-              para construir um futuro inovador.
+            <p className="text-muted-foreground text-xl lg:text-xl font-Ovo text-gray-800">
+              I am a passionate fullstack developer student, originally from
+              Brazil, now pursuing my high school education in the United
+              States. I enjoy exploring modern web technologies, creating
+              efficient applications, and continuously improving my skills.
             </p>
+
             <div className="flex flex-col sm:flex-row items-center justify-start gap-5 text-center">
               <Link
                 href="#contact"
                 className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition duration-300"
               >
                 Contact me{" "}
-                <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
               </Link>
               <a
                 href="https://www.linkedin.com/in/davi-aieta/"

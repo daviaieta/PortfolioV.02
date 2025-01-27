@@ -16,6 +16,22 @@ export const About = () => {
     "tailwind",
   ];
 
+  const calculateAge = (birthDate: any) => {
+    const today = new Date();
+    const birth = new Date(birthDate);
+    let age = today.getFullYear() - birth.getFullYear();
+    const monthDiff = today.getMonth() - birth.getMonth();
+
+    if (
+      monthDiff < 0 ||
+      (monthDiff === 0 && today.getDate() < birth.getDate())
+    ) {
+      age--;
+    }
+    return age;
+  };
+
+  const age = calculateAge("2009-09-27");
   return (
     <section id="about-me" className="py-16 lg:py-24">
       <div className="container mx-auto px-4">
@@ -30,10 +46,12 @@ export const About = () => {
               About Me
             </h2>
             <p className="text-muted-foreground text-lg font-Ovo text-gray-800">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Asperiores beatae possimus eos architecto tempora saepe excepturi
-              provident? Recusandae, tempore nam sapiente quo sit ducimus,
-              commodi debitis repellendus facere voluptatum cumque?
+              My journey in programming started at 12, when my father introduced
+              me to algorithms and logic. Since then, I’ve been deeply
+              passionate about technology, constantly learning and building
+              fullstack applications. Today, at {age} years old, I am dedicated
+              to exploring the limitless possibilities of the tech world and
+              creating innovative solutions.
             </p>
             <div>
               <h3 className="text-xl lg:text-2xl font-semibold font-Ovo mb-3 text-gray-800">
